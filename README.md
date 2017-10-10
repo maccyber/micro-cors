@@ -35,6 +35,27 @@ const handler = (req, res) => send(res, 200, 'ok!')
 module.exports = cors(handler)
 ```
 
+
+With multiple wrappers
+
+```js
+const microCors = require('micro-cors')
+const cors = require('micro-cors')()
+const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
+
+const handle = async(req, res) => {
+  return `Hello world`
+}
+
+module.exports = compose(
+    cors,
+    anotherWrapper,
+    analitycsWrapper,
+    redirectWrapper,
+    yetAnotherWrapper
+)(handle)
+```
+
 #### Options
 
 ##### `allowMethods`
