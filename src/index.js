@@ -18,7 +18,7 @@ const DEFAULT_ALLOW_HEADERS = [
 
 const DEFAULT_MAX_AGE_SECONDS = 60 * 60 * 24 // 24 hours
 
-module.exports = options => handler => (req, res, ...restArgs) => {
+module.exports = exports = options => handler => (req, res, ...restArgs) => {
   const {
     maxAge,
     origin,
