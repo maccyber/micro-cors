@@ -4,6 +4,8 @@
 
 # CORS middleware for Micro
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/maccyber/micro-cors.svg)](https://greenkeeper.io/)
+
 ### Summary
 
 Simple [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) middleware for Zeit's [Micro](https://github.com/zeit/micro)
